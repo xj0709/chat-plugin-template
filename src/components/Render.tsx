@@ -12,7 +12,7 @@ const useStyles = createStyles(({ css, token }) => ({
   `,
 }));
 
-const Render = memo<Partial<ResponseData>>(({ mood, clothes, today }) => {
+const Render = memo<Partial<ResponseData>>(({ baseline, clothes, today }) => {
   const { styles } = useStyles();
 
   return (
