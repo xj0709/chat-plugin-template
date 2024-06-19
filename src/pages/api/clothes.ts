@@ -15,8 +15,8 @@ export default async (req: Request) => {
   const clothes = gttscope === 'normal' ? manClothes : womanClothes;
 
   const result: ResponseData = {
-    clothes: baseline ? clothes[baseline] : Object.values(clothes).flat(),
     baseline,
+    clothes: baseline ? clothes[baseline] : Object.values(clothes).flat(),
     today: Date.now(),
   };
 
