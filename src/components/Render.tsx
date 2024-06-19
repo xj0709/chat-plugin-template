@@ -22,7 +22,7 @@ const Render = memo<Partial<ResponseData>>(({ mood, clothes, today }) => {
         <span className={styles.date}>{dayjs(today).format('YYYY/MM/DD')}</span>
       </Flexbox>
       <Flexbox gap={8}>
-        推荐衣物
+        推荐衣物a
         <Flexbox gap={12} horizontal style={{ overflow: 'scroll' }}>
           {clothes?.map((item) => (
             <Card key={item.name} size={'small'} title={item.name}>
