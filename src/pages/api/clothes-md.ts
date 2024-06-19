@@ -10,17 +10,17 @@ export const config = {
 export default async (req: Request) => {
   if (req.method !== 'POST') return createErrorResponse(PluginErrorType.MethodNotAllowed);
 
-  const { gender, mood } = (await req.json()) as RequestData;
+  const { gttscope, baseline } = (await req.json()) as RequestData;
 
-  const clothes = gender === 'man' ? manClothes : womanClothes;
+  const clothes = gttscope === 'normal' ? manClothes : womanClothes;
 
   const result: ResponseData = {
-    clothes: mood ? clothes[mood] : Object.values(clothes).flat(),
-    mood,
+    clothes: baseline ? clothes[baseline] : Object.values(clothes).flat(),
+    baseline,
     today: Date.now(),
   };
 
   return new Response(
-    `由于你的心情是${result.mood},我推荐你穿 ${result.clothes.map((c) => c.name).join('、')}。`,
+    `the build ${result.baseline} you want to start,result is ${result.clothes.map((c) => c.name).join('、')}.`,
   );
 };
