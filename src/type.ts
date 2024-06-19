@@ -6,11 +6,11 @@ type Mood = 'happy' | 'sad' | 'anger' | 'fear' | 'surprise' | 'disgust';
 
 export interface ResponseData {
   clothes: ClothesItem[];
-  mood: Mood;
+  baseline: Mood;
   today: number;
 }
 
 export interface RequestData {
-  gender: 'man' | 'woman';
-  mood: Mood;
+  gttscope: 'normal' | 'only';
+  baseline: Mood;
 }
