@@ -2,6 +2,6 @@ import { manClothes } from '@/data';
 
 export const data = {
   clothes: manClothes['happy'],
-  mood: 'happy',
+  baseline: 'happy',
   today: Date.now(),
 };
