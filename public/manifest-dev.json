@@ -2,7 +2,7 @@
   "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
   "api": [
     {
-      "url": "http://localhost:3400/api/clothes",
+      "url": "https://chat-plugin-template-ohhw2d732-xj0709s-projects.vercel.app",
       "name": "recommendClothes",
       "description": "根据用户的心情，给用户推荐他有的衣服",
       "parameters": {
@@ -25,7 +25,6 @@
   ],
   "author": "LobeHub",
   "createdAt": "2023-09-03",
-  "gateway": "http://localhost:3400/api/gateway",
   "homepage": "https://github.com/lobehub/chat-plugin-template",
   "identifier": "plugin-identifier",
   "meta": {
