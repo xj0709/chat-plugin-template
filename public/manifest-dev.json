@@ -4,21 +4,20 @@
     {
       "url": "https://chat-plugin-template.vercel.app/api/endpoint",
       "name": "recommendClothes",
-      "description": "根据用户的心情，给用户推荐他有的衣服",
+      "description": "start a build based on user's input: with gtt-scope and the baseline",
       "parameters": {
         "properties": {
-          "mood": {
-            "description": "用户当前的心情，可选值有：开心（happy）, 难过（sad）,生气 （anger）,害怕（fear）,惊喜（ surprise）,厌恶 （disgust）",
-            "enum": ["happy", "sad", "anger", "fear", "surprise", "disgust"],
+          "baseline": {
+            "description": "the baseline of this build, ask user to get this information",
             "type": "string"
           },
-          "gender": {
+          "gttscope": {
             "type": "string",
-            "enum": ["man", "woman"],
-            "description": "对话用户的性别，需要询问用户后才知道这个信息"
+            "enum": ["normal", "only"],
+            "description": "the gtt-scope, ask user to get this information"
           }
         },
-        "required": ["mood", "gender"],
+        "required": ["baseline", "gttscope"],
         "type": "object"
       }
     }
@@ -29,9 +28,9 @@
   "identifier": "plugin-identifier",
   "meta": {
     "avatar": "🚀",
-    "tags": ["template"],
-    "title": "Chat Plugin Template",
-    "description": "This is the plugin template for LobeChat plugin development"
+    "tags": ["test"],
+    "title": "BuildAssistant",
+    "description": "This is the BuildAssistant to help you start a build"
   },
   "ui": {
     "url": "https://chat-plugin-template.vercel.app",
