@@ -9,6 +9,7 @@
         "properties": {
           "baseline": {
             "description": "the baseline of this build, ask user to get this information",
+            "enum": ["happy", "sad", "anger", "fear", "surprise", "disgust"],
             "type": "string"
           },
           "gttscope": {
