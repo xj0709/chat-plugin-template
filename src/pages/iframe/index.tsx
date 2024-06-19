@@ -4,8 +4,8 @@ import { memo, useEffect, useState } from 'react';
 import { Center } from 'react-layout-kit';
 
 import Data from '@/components/Render';
-import { fetchClothes } from '@/services/clothes';
-import { ResponseData } from '@/type';
+import { startBuild } from '@/services/startbuild';
+import { ResponseData } from '@/type-dev';
 
 const Render = memo(() => {
   // 初始化渲染状态
@@ -21,14 +21,14 @@ const Render = memo(() => {
 
   useEffect(() => {
     lobeChat.getPluginPayload().then((payload) => {
-      if (payload.name === 'recommendClothes') {
+      if (payload.name === 'startBuildAss') {
         setPayload(payload.arguments);
       }
     });
   }, []);
 
   const fetchData = async () => {
-    const data = await fetchClothes(payload);
+    const data = await startBuild(payload);
     setData(data);
     lobeChat.setPluginMessage(data);
   };

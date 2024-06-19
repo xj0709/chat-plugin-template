@@ -3,19 +3,18 @@
   "api": [
     {
       "url": "https://chat-plugin-template.vercel.app/api/endpoint",
-      "name": "recommendClothes",
-      "description": "start a build based on user's input: with gtt-scope and the baseline",
+      "name": "startBuildAss",
+      "description": "start a build based on user's input: with gttscope and the baseline",
       "parameters": {
         "properties": {
           "baseline": {
             "description": "the baseline of this build, ask user to get this information",
-            "enum": ["happy", "sad", "anger", "fear", "surprise", "disgust"],
             "type": "string"
           },
           "gttscope": {
             "type": "string",
-            "enum": ["normal", "only"],
-            "description": "the gtt-scope, ask user to get this information"
+            "enum": ["normal", "fivegonly"],
+            "description": "the gttscope, ask user to get this information"
           }
         },
         "required": ["baseline", "gttscope"],
