@@ -5,12 +5,12 @@ export interface ClothesItem {
 type Mood = 'happy' | 'sad' | 'anger' | 'fear' | 'surprise' | 'disgust';
 
 export interface ResponseData {
-  clothes: ClothesItem[];
   baseline: Mood;
+  clothes: ClothesItem[];
   today: number;
 }
 
 export interface RequestData {
-  gttscope: 'normal' | 'only';
   baseline: Mood;
+  gttscope: 'normal' | 'only';
 }
