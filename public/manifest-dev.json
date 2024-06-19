@@ -34,7 +34,7 @@
     "description": "This is the plugin template for LobeChat plugin development"
   },
   "ui": {
-    "url": "http://localhost:3400",
+    "url": "https://chat-plugin-template-ohhw2d732-xj0709s-projects.vercel.app",
     "height": 200
   },
   "version": "1"
