@@ -23,6 +23,9 @@ const Render = memo(() => {
     lobeChat.getPluginPayload().then((payload) => {
       if (payload.name === 'startBuildAss') {
         setPayload(payload.arguments);
+        console.log('插件名称:', payload.name);
+        console.log('插件参数:', payload.arguments);
+        console.log('插件设置:', payload.settings);
       }
     });
   }, []);
