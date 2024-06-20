@@ -6,7 +6,6 @@ import { ResponseData } from '@/type-dev';
 
 const Render = memo(() => {
   const [data, setData] = useState<ResponseData>();
-  lobeChat.setPluginMessage('欢迎使用我们的插件！');
   useEffect(() => {
     lobeChat.getPluginMessage().then((e: ResponseData) => {
       setData(e);
