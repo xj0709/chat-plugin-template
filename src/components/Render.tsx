@@ -18,7 +18,7 @@ const Render = memo<Partial<ResponseData>>(({ baseline, result, today }) => {
   return (
     <Flexbox gap={24}>
       <Flexbox distribution={'space-between'} horizontal>
-        🌟baseline：{baseline}
+        🌟baseline: {baseline}
         <span className={styles.date}>{dayjs(today).format('YYYY/MM/DD')}</span>
       </Flexbox>
       <Flexbox gap={8}>
