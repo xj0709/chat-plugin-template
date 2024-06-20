@@ -10,13 +10,13 @@ export const config = {
 export default async (req: Request) => {
   if (req.method !== 'POST') return createErrorResponse(PluginErrorType.MethodNotAllowed);
 
-  const {gttscope, baseline} = (await req.json()) as RequestData;
+  const { gender, mood } = (await req.json()) as RequestData;
 
-  const clothes = gttscope === 'normal' ? manClothes : womanClothes;
+  const clothes = gender === 'man' ? manClothes : womanClothes;
 
   const result: ResponseData = {
-    baseline,
-    clothes: baseline ? clothes[baseline] : Object.values(clothes).flat(),
+    clothes: mood ? clothes[mood] : Object.values(clothes).flat(),
+    mood,
     today: Date.now(),
   };
 
